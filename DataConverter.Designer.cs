@@ -2,7 +2,7 @@
 
 namespace GBC
 {
-    partial class Form1
+    partial class DataConverter
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@ namespace GBC
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataConverter));
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -143,7 +143,7 @@ namespace GBC
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "Data-Converter";
             Text = "GBC数据转换器";
             TopMost = true;
             ResumeLayout(false);

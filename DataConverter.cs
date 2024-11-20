@@ -4,12 +4,12 @@ using System.Diagnostics;
 
 namespace GBC
 {
-    public partial class Form1 : Form
+    public partial class DataConverter : Form
     {
         // 存储当前选择的文件名
         private string fileName;
 
-        public Form1()
+        public DataConverter()
         {
             InitializeComponent();
             // 设置窗口标题
