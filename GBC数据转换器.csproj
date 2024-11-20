@@ -15,7 +15,7 @@
 		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
 		<EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
 		<!-- 其他发布优化 -->
-		<PublishTrimmed>false</PublishTrimmed>
+		<PublishTrimmed>false</PublishTrimmed> 
 		<!-- 禁用修剪以避免误删依赖 -->
 		<PublishReadyToRun>true</PublishReadyToRun>
 		<!-- 提高启动速度 -->
