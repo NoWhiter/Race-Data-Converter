@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- 单文件发布和压缩 -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+		<SelfContained>true</SelfContained>
+		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+		<!-- 其他发布优化 -->
+		<PublishTrimmed>false</PublishTrimmed>
+		<!-- 禁用修剪以避免误删依赖 -->
+		<PublishReadyToRun>true</PublishReadyToRun>
+		<!-- 提高启动速度 -->
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<!-- 图标配置 -->
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<PackageIcon>icon1.ico</PackageIcon>
+	</PropertyGroup>
+
+	<!-- 包引用 -->
+	<ItemGroup>
+		<PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+		<PackageReference Include="EPPlus" Version="7.5.0" />
+		<PackageReference Include="NPOI" Version="2.7.2" />
+	</ItemGroup>
+	<!-- 图标打包 -->
+	<ItemGroup>
+		<Content Include="favicon.ico" />
+		<None Update="Icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Update="icon1.ico">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<!-- 发布模式优化 -->
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+
+</Project>

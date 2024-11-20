@@ -38,6 +38,7 @@ namespace GBC
             label2 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            button4 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -49,7 +50,7 @@ namespace GBC
             button1.TabIndex = 0;
             button1.Text = "选择文件";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += Button1_Click;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -65,9 +66,9 @@ namespace GBC
             // button3
             // 
             button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button3.Location = new Point(12, 318);
+            button3.Location = new Point(172, 318);
             button3.Name = "button3";
-            button3.Size = new Size(290, 100);
+            button3.Size = new Size(130, 100);
             button3.TabIndex = 2;
             button3.Text = "开始";
             button3.UseVisualStyleBackColor = true;
@@ -85,11 +86,14 @@ namespace GBC
             // label2
             // 
             label2.AutoSize = true;
+            label2.Cursor = Cursors.Hand;
+            label2.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Underline);
             label2.Location = new Point(12, 421);
             label2.Name = "label2";
-            label2.Size = new Size(52, 20);
+            label2.Size = new Size(39, 20);
             label2.TabIndex = 4;
-            label2.Text = "v0.3.5";
+            label2.Text = "v0.4";
+            label2.Click += label2_Click;
             // 
             // radioButton1
             // 
@@ -113,11 +117,23 @@ namespace GBC
             radioButton2.Text = "不去重";
             radioButton2.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button4.Location = new Point(12, 318);
+            button4.Name = "button4";
+            button4.Size = new Size(130, 100);
+            button4.TabIndex = 7;
+            button4.Text = "队伍名单\n（可选）";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(318, 450);
+            Controls.Add(button4);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label2);
@@ -143,5 +159,6 @@ namespace GBC
         private Label label2;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private Button button4;
     }
 }
