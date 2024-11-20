@@ -7,7 +7,7 @@ namespace GBC
     public partial class DataConverter : Form
     {
         // 存储当前选择的文件名
-        private string fileName;
+        private string fileName; 
 
         public DataConverter()
         {
